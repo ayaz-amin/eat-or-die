@@ -17,12 +17,12 @@ void Application::Run(int FPS)
 {
     SetTargetFPS(FPS);
 
-    while(!WindowShouldClose())
+    while(!should_exit)
     {
         float dt = GetFrameTime();
         OnEvent();
         BeginDrawing();
-        ClearBackground(WHITE);
+        ClearBackground(_bg_color);
         Update(dt);
         EndDrawing();
     }

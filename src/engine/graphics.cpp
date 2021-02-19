@@ -28,10 +28,9 @@ void AnimatedSprite::RenderSprite(Vector2 transform)
 }
 
 // Button
-Button::Button(std::string path, int button_size)
+Button::Button(std::string path)
 {
     button_sprite = LoadTexture(path.c_str());
-    num_frames = button_size;
     source_frame = {0, 0, (float)button_sprite.width, (float)(button_sprite.height / num_frames)};
 }
 

@@ -23,12 +23,12 @@ struct Button
 {
     Texture2D button_sprite;
     Rectangle source_frame;
-    int num_frames;
+    const int num_frames = 3;
 
     int state; // three states: normal, hover and clicked
     bool is_pressed;
 
-    Button(std::string path, int button_size);
+    Button(std::string path);
     ~Button();
     
     bool RenderButton(Vector2 button_pos, Vector2 mouse_pos);
