@@ -18,19 +18,19 @@ struct Player
 
     float Update(float dt)
     {
-        if(IsKeyDown(KEY_LEFT))
+        if(IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A))
         {
             position.x -= 500 * dt;
         }
-        else if(IsKeyDown(KEY_RIGHT))
+        else if(IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D))
         {
             position.x += 500 * dt;
         }
-        else if(IsKeyDown(KEY_UP))
+        else if(IsKeyDown(KEY_UP) || IsKeyDown(KEY_W))
         {
             position.y -= 500 * dt;
         }
-        else if(IsKeyDown(KEY_DOWN))
+        else if(IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_S))
         {
             position.y += 500 * dt;
         }
